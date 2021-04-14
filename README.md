@@ -16,6 +16,9 @@ This project runs on the rinkeby testnet. You can use a metamask plugin to conne
 
 >`PRIV_KEY=<your private key>`
 
+### install dependencies at the root of the project
+* npm install
+
 ### client initialization
 * cd client
 * npm install 
