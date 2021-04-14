@@ -8,8 +8,8 @@ import { Container, Segment, Form, Button } from 'semantic-ui-react';
 
 const App = () => {
   let watch;
-  const [amount, setAmount] = useState(0);
-  const [blocks, setBlocks] = useState(0);
+  const [amount, setAmount] = useState("");
+  const [blocks, setBlocks] = useState("");
   const [isStakePoolEmpty, setPoolState] = useState(false);
   const [stakers, setStakers] = useState([])
   const [web3, accounts, contractInstance] = useWeb3();
@@ -59,6 +59,8 @@ const App = () => {
     if (!stakers.includes(accounts[0])) {
       //Add the current address to the stakers
       setStakers([...stakers, accounts[0]])
+      setAmount("");
+      setBlocks("")
     }
   }
 
@@ -111,6 +113,7 @@ const App = () => {
                 required
                 type="text"
                 placeholder={`amount (min = ${minimalStake} ETH)`}
+                value={amount}
                 onChange={handleAmount}
               />
               <Form.Input
@@ -118,6 +121,7 @@ const App = () => {
                 required
                 type="text"
                 placeholder={`number of blocks`}
+                value={blocks}
                 onChange={handleBlocks}
               />
               <div className="StackingButton">
