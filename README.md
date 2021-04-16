@@ -9,18 +9,19 @@ This project runs on the rinkeby testnet. You can use a metamask plugin to conne
 
 ### STEP 1: get the repository
 `git clone https://github.com/knzeng-e/Smart-lock-atka.git`
-### STEP 2: Setting the project (Only if you need to redeploy the smartcontract to have admin rights on it. Otherwise jump to step 4)
+### STEP 2: Setting the project (Only if you need to redeploy the smartcontract to have admin rights on it. Otherwise jump to step 5)
 * create a file named `.env`. In this file, put all sensible informations you need to keep secret 
 * create an infura endpoint api (https://infura.io/) and save it into your .env file under the variable `INFURA_LINK`
 > `INFURA_LINK=https://rinkeby.infura.io/v3/<infura_api>`
 * Save your privateKey into you .env file under the variable `PRIV_KEY`
 
 >`PRIV_KEY=<your private key>`
-### STEP 3: compile and deploy the smartcontract  
-> `truffle deploy --network rinkeby --skip-dry-run --reset`
-
-### STEP 4: install dependencies at the root of the project
+>
+### STEP 3: install dependencies at the root of the project
 * npm install
+
+### STEP 4: compile and deploy the smartcontract  
+> `truffle deploy --network rinkeby --skip-dry-run --reset`
 
 ### STEP 5: client initialization
 * cd client
